@@ -9,9 +9,9 @@
     'author': 'Heric Libong',
     'website': 'https://github.com/hericlibong/odoo-dam-module/wiki',
     'category': 'Tools',
-    'depends': [],
+    'depends': ['base'],
     'data': [
-        # List your data files here
+        'security/ir.model.access.csv',
     ],
     'demo': [
         # List your demo files here
