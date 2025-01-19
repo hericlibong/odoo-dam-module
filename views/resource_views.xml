@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue Formulaire -->
+    <record id="view_form_dam_resource" model="ir.ui.view">
+        <field name="name">dam.resource.form</field>
+        <field name="model">dam.resource</field>
+        <field name="arch" type="xml">
+            <form string="Resource">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="description"/>
+                        <field name="project_id"/>
+                        <field name="file"/>
+                    </group>
+                    <group>
+                        <field name="created_by" readonly="1"/>
+                        <field name="created_on" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue Liste -->
+    <record id="view_tree_dam_resource" model="ir.ui.view">
+        <field name="name">dam.resource.tree</field>
+        <field name="model">dam.resource</field>
+        <field name="arch" type="xml">
+            <tree string="Resources">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="project_id"/>
+                <field name="created_on"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
