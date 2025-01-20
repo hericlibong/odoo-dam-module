@@ -16,7 +16,4 @@ class Resource(models.Model):
         ('other', 'Other')
     ], string='Type', required=True, help='Type of the resource')
     description = fields.Text(string='Description', help='Description of the resource')
-    created_by = fields.Many2one(
-        'res.users', string='Created By', readonly=True, default=lambda self: self.env.user, help='User who created the resource')
-    created_on = fields.Datetime(string='Created On', readonly=True, default=fields.Datetime.now(), help='Date and time the resource was created')
     project_id = fields.Many2one('project.project', string='Project', help='Project the resource belongs to')
