@@ -35,6 +35,7 @@
                 <field name="name"/>
                 <field name="type"/>
                 <field name="project_id"/>
+                <field name="file" string="File Size"/>
                 <field name="create_date" string="created On"/>
                 
             </tree>
