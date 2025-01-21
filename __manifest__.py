@@ -11,6 +11,7 @@
     'category': 'Tools',
     'depends': ['base', 'project'],
     'data': [
+        'security/resource_groups.xml',
         'security/ir.model.access.csv',
         'views/resource_views.xml',
         'views/resource_menu.xml',
