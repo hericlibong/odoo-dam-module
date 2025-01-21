@@ -1,5 +1,4 @@
 from odoo import models, fields, api
-from mimetypes import guess_type 
 
 
 class Resource(models.Model):
