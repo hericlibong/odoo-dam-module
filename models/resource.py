@@ -23,4 +23,38 @@ class Resource(models.Model):
     def _compute_is_image(self):
         for record in self:
             record.is_image = record.type == 'image'
+
+    @api.model
+    def create(self, vals):
+        record = super(Resource, self).create(vals)
+        self.env['dam.resource.log'].create({
+            'resource_id': record.id,
+            'action': 'create',
+            'user_id': self.env.uid,
+        })
+        return record
+    
+    def write(self, vals):
+        result = super(Resource, self).write(vals)
+        for record in self:
+            self.env['dam.resource.log'].create({
+                'resource_id': record.id,
+                'action': 'write',
+                'user_id': self.env.uid,
+            })
+        return result
+    
+    def unlink(self):
+        for record in self:
+            self.env['dam.resource.log'].create({
+                'resource_id': record.id,
+                'action': 'unlink',
+                'user_id': self.env.uid,
+            })
+        return super(Resource, self).unlink()
+
+
+    
+
+
                     

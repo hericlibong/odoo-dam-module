@@ -15,6 +15,7 @@
         'security/ir.model.access.csv',
         'views/resource_views.xml',
         'views/resource_menu.xml',
+        'views/resource_log_views.xml',
     ],
     'demo': [
         # List your demo files here
