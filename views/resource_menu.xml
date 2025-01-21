@@ -18,6 +18,7 @@
         id="menu_dam_root" 
         web_icon="odoo_dam_module,static/description/icon.png" 
         sequence="10" 
+        groups="odoo_dam_module.group_dam_visitor,odoo_dam_module.group_dam_editor,odoo_dam_module.group_dam_admin"
     />
 
     <!-- Sous-menu Ressources -->
@@ -26,6 +27,7 @@
         name="Resources" 
         parent="menu_dam_root" 
         sequence="10" 
-        action="action_dam_resource" 
+        action="action_dam_resource"
+        groups="odoo_dam_module.group_dam_visitor,odoo_dam_module.group_dam_editor,odoo_dam_module.group_dam_admin"
     />
 </odoo>
